@@ -1,12 +1,11 @@
 @use '../../assets/scss/abstracts/variables' as var;
 @use '../../assets/scss/abstracts/functions' as func;
-@use '../../assets/scss/abstracts/mixins' as mix;
 
 .card,
 .card-image,
 .card-content {
-	@include mix.flexbox;
-	@include mix.flex-direction(column);
+	display: flex;
+	flex-direction: column;
 }
 
 .card {
@@ -15,15 +14,15 @@
 	padding: func.em(24);
 	margin: func.em(40) 0 func.em(60);
 	background-color: var.$color-dark-blue-2;
-	@include mix.border-radius(15px);
-	@include mix.box-shadow(0 func.em(25) func.em(50) rgba(0, 0, 0, 0.1));
+	border-radius: 15px;
+	box-shadow: 0 func.em(25) func.em(50) rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
 	position: relative;
 	margin-bottom: func.em(24);
 	background-color: var.$color-soft-blue;
-	@include mix.border-radius(8px);
+	border-radius: 8px;
 	cursor: pointer;
 }
 
@@ -36,8 +35,8 @@
 	background-image: url('../../assets/images/icons/view.svg');
 	background-repeat: no-repeat;
 	background-position: center;
-	@include mix.border-radius(inherit);
-	@include mix.transition(opacity 0.3s);
+	border-radius: inherit;
+	transition: opacity 0.3s;
 	opacity: 0;
 }
 
@@ -48,7 +47,7 @@
 .card-image img {
 	width: 100%;
 	height: auto;
-	@include mix.border-radius(inherit);
+	border-radius: inherit;
 }
 
 .card-title {
@@ -60,12 +59,12 @@
 }
 
 .card-stats-list {
-	@include mix.flexbox;
+	display: flex;
 }
 
 .card-stats-list-item {
-	@include mix.flexbox;
-	@include mix.align-items(center);
+	display: flex;
+	align-items: center;
 	width: 50%;
 	font-size: func.em(15);
 }
@@ -76,24 +75,24 @@
 }
 
 .card-stats-list-item:last-child {
-	@include mix.justify-content(flex-end);
+	justify-content: flex-end;
 }
 
 .card-stats-list-item i {
-	@include mix.flex(none);
+	flex: none;
 	margin-right: func.em(7.7);
 }
 
 .card-author {
-	@include mix.flexbox;
-	@include mix.align-items(center);
+	display: flex;
+	align-items: center;
 	padding-top: func.em(16);
 	margin-top: func.em(16);
 	border-top: 1px solid var.$color-dark-blue-3;
 }
 
 .card-author-img {
-	@include mix.flex(none);
+	flex: none;
 	width: func.em(33);
 	height: auto;
 	margin-right: func.em(16);
