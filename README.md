@@ -21,7 +21,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - React
-- Css Modules
+- CSS Modules
 - Mobile-first workflow
 
 ## Author
